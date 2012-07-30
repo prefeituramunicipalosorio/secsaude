@@ -1,0 +1,267 @@
+#menulateral {
+    width: 200px;
+    float: left;
+}
+#menulateral ul li {
+    list-style: none;
+    border-bottom: solid 1px #ccc;
+    border-right: dashed 1px #ccc;
+    background-color: #eee;
+    padding: 3px;
+    padding-left: 13px;
+}
+#menulateral ul li:hover {
+    background-color: #fff;
+}
+#menulateral a {
+    text-decoration: none;
+    cursor: default;
+    font-family: Ubuntu, Arial, Verdana, Geneva, Helvetica, sans-serif; 
+}
+#conteudo_dti {
+    width: 750px;
+    padding-left: 50px;
+    float: left;
+    font-family: Ubuntu, Arial, Verdana, Geneva, Helvetica, sans-serif; 
+    line-height: 2.5;
+}
+#conteudo_dti #addItem #link {
+    width: 40px;
+    float: left;
+}
+#conteudo_dti #addItem #label {
+    font-size: 15px;
+    color: darkgreen;
+    font-weight: bold;
+}
+#conteudo_dti #titulo {
+	width: 90%;
+}
+#conteudo_dti #listaNotas {
+	border-top: dashed 1px #ccc;
+	padding-top: 15px;
+}
+#conteudo_dti #item {
+    width: 70%;
+    border: solid 1px #ddd;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#conteudo_dti #addToDo, #altToDo, #cancToDo, #encarregado {
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+}
+#conteudo_dti #encarregado {
+    font-weight: normal;
+}
+#conteudo_dti #item, #encarregado, #addToDo, #altToDo, #cancToDo {
+    float: left;
+}
+#conteudo_dti #concl {
+    text-decoration: line-through;
+    color: #aaa;
+}
+#conteudo_dti #urgent {
+    color: #fff;
+    background-color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+#conteudo_dti #linha {
+    float: left;
+    padding-top: 4px;
+}
+#conteudo_dti #tarefaedit, #encarregadoedit, #anotacoesedit {
+    width: 93%;
+}
+#conteudo_dti #anotacoesedit {
+    height: 100px;
+}
+#conteudo_dti #bprocassunto, #cprocassunto {
+    width: 400px;
+}
+#conteudo_dti #procnumero, #procano {
+    width: 60px;
+}
+#conteudo_dti input,select,textarea {
+    padding: 5px;
+    border: solid 1px #ccc;
+    font-size: 12px;
+}
+#conteudo_dti .anotacoes {
+    width: 90%;
+    border: solid 1px #ccc;
+    padding: 5px;
+    font-family: Arial, Verdana;
+}
+#conteudo_dti #btanotacoes {
+    font-weight: bold;
+	padding: 5px;
+}
+#conteudo_dti #dataini, #datafim {
+	width: 70px;
+}
+#conteudo_dti ul li small {
+	color: #888;
+}
+#conteudo_dti #formCadPessoas #col  {
+	float: left;
+	width: 50%;
+}
+#conteudo_dti #formCadPessoas #col  input, select{
+	width: 90%;
+}
+#conteudo_dti #formCadPessoas #col label {
+	font-size: 9px;
+}
+#conteudo_dti select {
+	width: auto;
+}
+#conteudo_dti #menudtiequipamentos {
+	margin-bottom: 20px;
+}
+#conteudo_dti #entradapatrimonio label {
+	font-size: 10px;
+}
+#conteudo_dti #entradapatrimonio legend {
+	font-weight: bold;
+}
+#conteudo_dti #entradapatrimonio fieldset {
+	border: solid 1px #ccc;
+}
+#conteudo_dti #entradapatrimonio #trescolunas {
+	width: 33%;
+	float: left;
+}
+#conteudo_dti #entradapatrimonio #quatrocolunas {
+	width: 25%;
+	float: left;
+}
+#conteudo_dti #alerta, #qtde {
+	width: 50px;
+}
+#conteudo_dti #validade, #codigobarra {
+	width: 90px;
+}
+#conteudo_dti input,select,textarea {
+    font-family: Ubuntu, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-size: 12px; 
+    padding: 5px;
+}
+
+#conteudo_dti #col2 {
+	width: 48%;
+	float: left;
+}
+
+#conteudo_dti #col3 {
+	width: 30%;
+	float: left;
+}
+
+#conteudo_dti #col4 {
+	width: 22%;
+	margin-right: 5px;
+	float: left;
+}
+
+#conteudo_dti #col4 #ferias_datasaida,#ferias_dataretorno,#ferias_dias {
+	width: 95%;
+}
+
+#conteudo_dti #col5 {
+	width: 18%;
+	margin-right: 5px;
+	float: left;
+}
+
+#conteudo_dti #col4 span {
+	color: #fff;
+}
+
+#conteudo_dti #col5 span {
+	color: #fff;
+}
+
+#conteudo_dti #col5 input {
+	width: 95%;
+}
+#conteudo_dti #col5 select {
+	width: 90%;
+}
+
+#conteudo_dti #col5 #botaoSalvarHoras {
+	width: auto;
+}
+
+#conteudo_dti #col2 textarea {
+	width: 90%;
+	height: 120px;
+}
+
+#conteudo_dti #col5 #h1,#h2,#h3,#h4 {
+	width: 95%;
+}
+
+#conteudo_dti .selecionado {
+	
+}
+
+#conteudo_dti .naoselecionado {
+	color: #777;
+}
+
+#conteudo_dti #col12 {
+	width: 28px;
+	height: 50px;
+	padding: 5px;
+	font-size: 10px;
+	float: left;
+	border-right: solid 1px #777;
+	border-bottom: solid 1px #777;
+	text-align: center;
+}
+
+#conteudo_dti .cab {
+	font-weight: bold;
+	background-color: #ddd;
+}
+
+#conteudo_dti #linhachamado {
+	line-height: 1;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-bottom: solid 1px #ddd;
+}
+
+#conteudo_dti #msg_chamado {
+	margin: 10px;
+	padding: 10px;
+	border-left: solid 3px #ccc;
+	border-bottom: dashed 1px #ccc;
+}
+
+#conteudo_dti #msg_chamado #msg_info {
+	margin: 0px;
+	padding: 10px;
+	border-top: dashed 1px #ccc;
+	font-size: 10px;
+}
+
+#conteudo_dti #msgreply,#msganot {
+	width: 100%;
+	height: 100px;
+}
+
+#conteudo_dti #motivo {
+	width: 100%;
+	height: 100px;
+}
+
+#conteudo_dti #assunto2 {
+	width: 100%;
+}

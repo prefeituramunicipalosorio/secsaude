@@ -1,0 +1,7 @@
+SOBRE
+
+Script que envia o IP e o MAC de máquinas clientes na rede, para um banco de dados no servidor. Testado em máquinas com Ubuntu Linux.
+
+* sendip.sh: este script deve ficar na máquina cliente. Sempre que for executado, irá capturar o IP e o MAC e enviar, via CURL, para o servidor.
+* updateIP.php: script no servidor que irá receber os dados do cliente e inserir no banco de dados.
+* crislib.php: biblioteca de funções para agilizar o desenvolvimento em PHP.

@@ -1,0 +1,3 @@
+SOBRE
+
+Script que verifica se há atualizações para baixar. Se houver, baixa, descompacta o arquivo atualizacoes.tar.gz, executa o arquivo install.sh (que deve estar dentro do atualizacoes.tar.gz), sai da pasta de atualizações e apaga a pasta.

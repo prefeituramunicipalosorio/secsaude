@@ -1,0 +1,3 @@
+SOBRE
+
+Script que verifica no banco de dados se há alguma notificação para ser enviado para o pc cliente. Exemplo de uso: após o horário de expediênte será realizada manutenção nos computadores, deixe seu computador ligado.

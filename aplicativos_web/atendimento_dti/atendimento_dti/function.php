@@ -15,12 +15,15 @@
  * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=licenca
  */
  
-
-### CONFIGURAÇÕES GERAIS ###
-define('URL_MODULO','mods/atendimento_dti/'); //informe o diretório onde o módulo será instalado, a partir da raiz
-define('URL_MODULO_VIA_PAINEL','/?painel&m=atendimento_dti'); //informe como ficará a URL no navegador para acessar seu módulo
-include_once("crislib.php"); //inclusão da biblioteca de funções crislib.php
-
+/**
+ * Verifica, usando uma função utilizada no framework da Secretaria Municipal da Saúde, se o usuário está logado
+ * @since 8
+ * @version 1
+ */
+if(estaLogado() == false){
+	error("Oops! Voc&ecirc; precisa estar logado para acessar este recurso!");
+	exit;
+}
 
 /**
  * @name menuLateral()
@@ -29,7 +32,7 @@ include_once("crislib.php"); //inclusão da biblioteca de funções crislib.php
  * @example menuLateral();
  */
 function menuLateral(){
-    $path = URL_MODULO_VIA_PAINEL."&p=";
+    $path = "/?painel&m=atendimento_dti&p=";
     ?>
     <div id="menulateral">
         <ul>
@@ -122,9 +125,9 @@ function listaChamados($status=1,$ordem=false,$tag=false){
 			$contareplys = "$contareplys respostas";
 		}
 		if($r["urgencia_atendente"] == 1){
-			e(" <span style=\"color: red;\"><a href=\"".URL_MODULO_VIA_PAINEL."&p=chamado&i=".$r["chave"]."\" style=\"color: red;\">");
+			e(" <span style=\"color: red;\"><a href=\"?painel&m=atendimento_dti&p=chamado&i=".$r["chave"]."\" style=\"color: red;\">");
 		}else{
-			e(" <a href=\"".URL_MODULO_VIA_PAINEL."&p=chamado&i=".$r["chave"]."\">");
+			e(" <a href=\"?painel&m=atendimento_dti&p=chamado&i=".$r["chave"]."\">");
 		}
 		e(utf8_decode($r["assunto"])."</a>, ".data($dt[0])." &agrave;s ".substr($dt[1],0,5).", por ".utf8_decode(campo("dti_pessoas","nome",$r["idusuario"]))." (".utf8_decode(campo("unidades","nome",campo("dti_pessoas","unidade",$r["idusuario"])))."), $contareplys");
 		
@@ -196,7 +199,7 @@ function listaTags($chave){
         $numtags = count($tags);
         $contador = 0;
         while($contador != $numtags){
-            e("<a href=\"".URL_MODULO_VIA_PAINEL."&tag=".utf8_decode($tags[$contador])."\">".utf8_decode($tags[$contador])."</a> ");
+            e("<a href=\"?painel&m=atendimento_dti&tag=".utf8_decode($tags[$contador])."\">".utf8_decode($tags[$contador])."</a> ");
             $contador = $contador + 1;
         }
         e(" [<a href=\"#\" onclick=\"novaTag()\">nova tag</a>]");
@@ -216,7 +219,7 @@ function listaTagsHome(){
         $totalchamados = total($sel2);
         if($totalchamados > 0){
             $fontsize = 10+($totalchamados*2);
-            $tags .= "<a href=\"".URL_MODULO_VIA_PAINEL."&tag=".utf8_decode($r["tag"])."\" style=\"font-size: {$fontsize}px\">".utf8_decode($r["tag"])."</a> ";
+            $tags .= "<a href=\"?painel&m=atendimento_dti&tag=".utf8_decode($r["tag"])."\" style=\"font-size: {$fontsize}px\">".utf8_decode($r["tag"])."</a> ";
         }
     }
     info($tags);

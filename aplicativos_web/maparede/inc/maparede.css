@@ -1,0 +1,28 @@
+                body { margin: 0px; font-family: "Trebuchet MS", Arial, Sans-Serif; font-size: 14px; }
+                a { color: #0066CC; text-decoration: none; }
+                a:hover { color: #CC0000; text-decoration: underline; }
+                .alerta1 { background-image: url(../alerta_1_azul.png); width: 164px; height: 179px; position: absolute; text-decoration: blink; }
+                .alerta2 { background-image: url(../alerta_2_amarelo.png); width: 164px; height: 179px; position: absolute; text-decoration: blink; }
+                .alerta3 { background-image: url(../alerta_3_laranja.png); width: 164px; height: 179px; position: absolute; text-decoration: blink; }
+                .alerta4 { background-image: url(../alerta_4_vermelho.png); width: 164px; height: 179px; position: absolute; text-decoration: blink; }
+                .alerta5 { background-image: url(../alerta_5_preto.png); width: 164px; height: 179px; position: absolute; text-decoration: blink; }
+                #laranjeiras { top: 40px; left: 30px; }
+                #tlaranjeiras { top: 240px; left: 40px; }
+                #hamurabi { top: 240px; left: 440px; }
+                #tmorro { top: 80px; left: 600px; }
+                #passinhos { top: 320px; left: 0px; }
+                #tpassinhos { top: 440px; left: 0px; }
+                #gloria { top: 400px; left: 340px; }
+                #staluzia { top: 570px; left: 330px; }
+                #albatroz { top: 470px; left: 430px; }
+                #central { top: 390px; left: 520px; }
+                #capsi { top: 260px; left: 590px; }
+                #capsii { top: 380px; left: 690px; }
+                #caravagio { top: 510px; left: 680px; }
+                #primavera { top: 510px; left: 830px; }
+                #tnorte { top: 70px; left: 920px; }
+                #atlsul { top: 580px; left: 1050px; }
+                #aguapes { top: 80px; left: 1190px; }
+                #arroio { top: 230px; left: 920px; }
+                #palmital { top: 320px; left: 1100px; }
+		#boxaux { position: absolute; top: 500px; left: 1000px; z-index: 1000; width: 300px; border: dashed 1px #ccc; text-align: center; background-color: #fff; box-shadow:5px 5px 10px #666; cursor: default; }

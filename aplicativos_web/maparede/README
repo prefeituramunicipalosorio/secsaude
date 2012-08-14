@@ -1,0 +1,3 @@
+Script para monitoramento das antenas de rádio espalhadas pela rede de dados da Secretaria. 
+
+Com arquivo python, é feito o ping nos IPs cadastrados em uma tabela. O resultado do ping é armazenado no banco de dados. Com o arquivo PHP pode-se visualizar o mapa com 5 níveis de status. Até 100ms não exibe nada; de 100ms à 300ms mostra na tela um círculo azul, em torno do desenho da antena que está com este ping. De 300ms à 600ms, exibe um círculo amarelo; de 600ms à 900ms, exibe um círculo laranja; acima de 900ms exibe um círculo azul. E se o status for 0, ou seja, não foi possível pingar, exibe um círculo preto.

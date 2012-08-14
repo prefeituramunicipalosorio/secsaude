@@ -26,25 +26,35 @@
  */
 
 /**
- * @name Arquivo config.php, pertencente ao programa "Ambiente Virtual de Educação À Distância"
+ * @name Arquivo index.php, pertencente ao programa "Ambiente Virtual de Educação À Distância"
  * @package eadlivre
  * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
- * @since 1
+ * @since 2
  * @version 2
  * @license GPLv2
- * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=licenca
+ * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=eadlivre
  */
-
-# Definições gerais
-define('SISTEMA_AUTENTICACAO','0'); // 0 = sistema deste pacote | 1 = usando sistema externo
-define('LANG','pt-br'); // idiomas no diretório lang/
-define('EMAIL_ADMINISTRADOR','dtisaude@hotmail.com');
-define('TAG_TITLE','EAD Livre - Secretaria Municipal da Sa&uacute;de / Os&oacute;rio - RS');
-$tema = new temas();
-define('TEMA_DIR',$tema->tema());
-
-# Banco de dados MySQL
-define('DBURL','localhost');
-define('DBNAME','eadlivre');
-define('DBUSER','root');
-define('DBPASS','');
+include("templates/".TEMA_DIR."/lang/".LANG."/lang.php");
+?>
+<html>
+    <head>
+        <title><?= TAG_TITLE ?></title>
+    </head>
+    <body>
+        <div id="topo">
+            <? $tema->logo() ?>
+        </div>
+        <div id="conteudo">
+            <div id="menu">
+                <? $tema->menu() ?>
+            </div>
+            <div id="conteudo">
+                <? $core->conteudo($_GET["p"],$_GET["s"],$_GET["ss"]) ?>
+            </div>
+        </div>
+        <div id="rodape">
+            <?= COPY_MSG ?>
+            <?= COPY_GPL ?>
+        </div>
+    </body>
+</html>

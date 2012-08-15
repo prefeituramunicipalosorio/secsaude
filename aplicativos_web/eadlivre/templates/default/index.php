@@ -35,6 +35,8 @@
  * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=eadlivre
  */
 include("templates/".TEMA_DIR."/lang/".LANG."/lang.php");
+$core = new core();
+$tema = new tema();
 ?>
 <html>
     <head>
@@ -43,6 +45,7 @@ include("templates/".TEMA_DIR."/lang/".LANG."/lang.php");
     <body>
         <div id="topo">
             <? $tema->logo() ?>
+            <? $tema->boxlogin() ?>
         </div>
         <div id="conteudo">
             <div id="menu">

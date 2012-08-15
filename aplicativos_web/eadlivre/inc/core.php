@@ -400,4 +400,16 @@ class temas {
     public function menu(){
 
     }
+
+    /**
+     * Mostra box para usuário fazer o login ou, se o usuário já estiver logado, mostra mensagem ao usuário
+     * @name boxlogin
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 4
+     * @version 1
+     * @example $tema->boxlogin();
+     */
+    public function boxlogin(){
+        
+    }
 }

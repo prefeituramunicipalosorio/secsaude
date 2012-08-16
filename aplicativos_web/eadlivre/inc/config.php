@@ -32,18 +32,20 @@
  * @since 1
  * @version 2
  * @license GPLv2
- * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=eadlivre
+ * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=licenca
  */
 
 # Definições gerais
 define('SISTEMA_AUTENTICACAO','0'); // 0 = sistema deste pacote | 1 = usando sistema externo
-define('LANG','pt-br'); // idiomas no diretório lang/
+$core = new core();
+define('LANG',$core->lang()); // idiomas no diretório lang/
 define('EMAIL_ADMINISTRADOR','dtisaude@hotmail.com');
-
+define('TAG_TITLE',$core->tag_title());
+$tema = new temas();
+define('TEMA_DIR',$tema->tema());
 
 # Banco de dados MySQL
 define('DBURL','localhost');
 define('DBNAME','eadlivre');
 define('DBUSER','root');
 define('DBPASS','');
-define('ERROR_MYSQL','');

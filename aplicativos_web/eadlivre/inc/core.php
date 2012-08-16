@@ -30,10 +30,61 @@
  * @package eadlivre
  * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
  * @since 1
- * @version 1
+ * @version 2
  * @license GPLv2
  * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=eadlivre
  */
+
+/**
+ * Tarefas do sistema
+ *
+ * @name core
+ * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+ * @since 3
+ * @version 1
+ * @example $core = new core();
+ */
+class core {
+    /**
+     * Verifica no banco qual o idioma escolhido para o ambiente
+     *
+     * @name lang
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 9
+     * @version 1
+     * @example $core->lang();
+     */
+    public function lang(){
+        return "pt-br";
+    }
+
+    /**
+     * Verifica no banco qual o idioma escolhido para o ambiente
+     *
+     * @name lang
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 9
+     * @version 1
+     * @example $core->lang();
+     */
+    public function tag_title(){
+        return "EAD Livre - Secretaria Municipal da Sa&uacute;de / Os&oacute;rio - RS";
+    }
+
+    /**
+     * Realiza a conexão com o banco de dados MySQL
+     *
+     * @name conecta
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 1
+     * @version 2
+     * @param string $pagina | string $secao | string $subsecao
+     * @example $core->conteudo($_GET["p"],$_GET["s"],$_GET["ss"]);
+     */
+    public function conteudo($pagina,$secao,$subsecao){
+
+    }
+}
 
 /**
  * Banco de dados
@@ -58,6 +109,7 @@ class conexao {
         $con = con(DBUSER,DBPASS,DBURL);
         $db = db(DBNAME);
     }
+
     /**
      * Fecha a conexão com o banco de dados MySQL
      *
@@ -323,5 +375,67 @@ class log {
      */
     public function logu($txt){
 
+    }
+}
+
+/**
+ * Trabalha com os temas visuais do ambiente
+ *
+ * @name temas
+ * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+ * @since 3
+ * @version 1
+ * @example $tema = new temas();
+ */
+class temas {
+    /**
+     * Pesquisa no banco de dados qual tema está sendo usado no ambiente
+     *
+     * @name tema
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 3
+     * @version 1
+     * @example $tema->tema();
+     */
+    public function tema(){
+        return "default";
+    }
+
+    /**
+     * Exibe o logo ou o nome do site/ambiente (imagem ou texto), de acordo com configuração no banco
+     *
+     * @name logo
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 3
+     * @version 1
+     * @example $tema->logo();
+     */
+    public function logo(){
+        echo "EADLivre";
+    }
+
+    /**
+     * Monta menu no tema
+     *
+     * @name menu
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 3
+     * @version 1
+     * @example $tema->menu();
+     */
+    public function menu(){
+
+    }
+
+    /**
+     * Mostra box para usuário fazer o login ou, se o usuário já estiver logado, mostra mensagem ao usuário
+     * @name boxlogin
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 4
+     * @version 1
+     * @example $tema->boxlogin();
+     */
+    public function boxlogin(){
+        
     }
 }

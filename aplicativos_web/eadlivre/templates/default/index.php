@@ -26,7 +26,7 @@
  */
 
 /**
- * @name Arquivo lang.php, pertencente ao programa "Ambiente Virtual de Educação À Distância"
+ * @name Arquivo index.php, pertencente ao programa "Ambiente Virtual de Educação À Distância"
  * @package eadlivre
  * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
  * @since 2
@@ -34,12 +34,33 @@
  * @license GPLv2
  * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=eadlivre
  */
-
-# core.php > class autentica
-define('LANG_CORE_AUT_ERRO_1','Oops! Sua conta no ambiente EAD est&aacute; desativada! Entre em contato com o <a href=\"".EMAIL_ADMINISTRADOR."\">administrador</a> para resolver este problema.');
-define('LANG_CORE_AUT_ERRO_2','Ocorreu um erro: ou seu usu&aacute;rio ou sua senha est&atilde;o errados. Verifique e tente novamente.');
-define('LANG_CORE_AUT_LOG_1','Entrou no ambiente.');
-
-# templates/
-define('COPY_MSG',TAG_TITLE);
-define('COPY_GPL','Este ambiente utiliza o sistema <a href="https://github.com/prefeituramunicipalosorio/secsaude/tree/master/aplicativos_web/eadlivre" target="_blank">EADLivre</a> sob licen&ccedil;a <a href="http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=licenca" target="_blank">GPLv2</a>.');
+include("templates/".TEMA_DIR."/lang/".LANG."/lang.php");
+$core = new core();
+$tema = new temas();
+?>
+<html>
+    <head>
+        <title><?= TAG_TITLE ?></title>
+    </head>
+    <body>
+        <div id="coluna_esq">
+            <div id="topo">
+                <? $tema->logo() ?>
+                <? $tema->boxlogin() ?>
+            </div>
+        </div>
+        <div id="conteudo">
+            <div id="menu">
+                <? $tema->menu() ?>
+            </div>
+            <div id="conteudo">
+                <? $core->conteudo($_GET["p"],$_GET["s"],$_GET["ss"]) ?>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+        <div id="rodape">
+            <?= COPY_MSG ?><br>
+            <?= COPY_GPL ?>
+        </div>
+    </body>
+</html>

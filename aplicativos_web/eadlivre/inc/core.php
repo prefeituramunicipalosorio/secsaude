@@ -411,7 +411,10 @@ class temas {
      * @example $tema->logo();
      */
     public function logo(){
-        echo "EADLivre";
+        echo "
+            <div id=\"logo\">
+                <a href=\"/eadlivre/\">EADLivre</a>
+            </div>";
     }
 
     /**
@@ -436,6 +439,9 @@ class temas {
      * @example $tema->boxlogin();
      */
     public function boxlogin(){
-        
+        echo "
+        <div id=\"bemvindo\">
+            Seja bem vindo visitante!
+        </div>";
     }
 }

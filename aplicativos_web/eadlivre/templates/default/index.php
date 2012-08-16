@@ -41,6 +41,27 @@ $tema = new temas();
 <html>
     <head>
         <title><?= TAG_TITLE ?></title>
+
+        <meta http-equiv="content-language" content="<?= LANG ?>">
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+        <meta name="description" content="" />
+        <meta name="keywords" content="">
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="robots" content="noarchive">
+        <meta name="author" content="Tiago Floriano, Dep. TI, Secretaria Municipal da Saude, Osorio, RS" />
+        <meta name="reply-to" content="dtisaude@hotmail.com">
+        <meta name="google" content="notranslate" />
+        
+        <script type="text/javascript" src="inc/js.js"></script>
+        <link type="text/css" href="inc/css.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="<?= "templates/".TEMA_DIR ?>/inc/js.js"></script>
+        <link type="text/css" href="<?= "templates/".TEMA_DIR ?>/inc/css.css" rel="stylesheet" />
+
+        <script type="text/javascript" src="<?= "templates/".TEMA_DIR ?>/inc/jquery-1.5.1.js"></script>
+        <link type="text/css" href="<?= "templates/".TEMA_DIR ?>/inc/jqueryui/css/redmond/jquery-ui-1.8.10.custom.css" rel="stylesheet" />
+        <script type="text/javascript" src="<?= "templates/".TEMA_DIR ?>/inc/jqueryui/js/jquery-ui-1.8.10.custom.min.js"></script>
+        <link type="text/css" href="<?= "templates/".TEMA_DIR ?>/inc/jqueryui.css" rel="stylesheet" />
     </head>
     <body>
         <div id="coluna_esq">

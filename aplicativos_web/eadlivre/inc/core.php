@@ -46,6 +46,7 @@
  */
 class core {
     /**
+<<<<<<< HEAD
      * Verifica no banco qual o idioma escolhido para o ambiente
      *
      * @name lang
@@ -72,6 +73,8 @@ class core {
     }
 
     /**
+=======
+>>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
      * Realiza a conexão com o banco de dados MySQL
      *
      * @name conecta
@@ -82,7 +85,11 @@ class core {
      * @example $core->conteudo($_GET["p"],$_GET["s"],$_GET["ss"]);
      */
     public function conteudo($pagina,$secao,$subsecao){
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
     }
 }
 
@@ -398,7 +405,11 @@ class temas {
      * @example $tema->tema();
      */
     public function tema(){
+<<<<<<< HEAD
         return "default";
+=======
+
+>>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
     }
 
     /**
@@ -411,10 +422,14 @@ class temas {
      * @example $tema->logo();
      */
     public function logo(){
+<<<<<<< HEAD
         echo "
             <div id=\"logo\">
                 <a href=\"/eadlivre/\">EADLivre</a>
             </div>";
+=======
+
+>>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
     }
 
     /**
@@ -439,9 +454,13 @@ class temas {
      * @example $tema->boxlogin();
      */
     public function boxlogin(){
+<<<<<<< HEAD
         echo "
         <div id=\"bemvindo\">
             Seja bem vindo visitante!
         </div>";
+=======
+        
+>>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
     }
 }

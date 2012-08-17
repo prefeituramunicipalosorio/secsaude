@@ -40,6 +40,12 @@ define('LANG_CORE_AUT_ERRO_1','Oops! Sua conta no ambiente EAD est&aacute; desat
 define('LANG_CORE_AUT_ERRO_2','Ocorreu um erro: ou seu usu&aacute;rio ou sua senha est&atilde;o errados. Verifique e tente novamente.');
 define('LANG_CORE_AUT_LOG_1','Entrou no ambiente.');
 
+<<<<<<< HEAD
 # templates/
 define('COPY_MSG',TAG_TITLE);
 define('COPY_GPL','Este ambiente utiliza o sistema <a href="https://github.com/prefeituramunicipalosorio/secsaude/tree/master/aplicativos_web/eadlivre" target="_blank">EADLivre</a> sob licen&ccedil;a <a href="http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=licenca" target="_blank">GPLv2</a>.');
+=======
+# templates/x/footer.php
+define('COPY_MSG',TAG_TITLE);
+define('COPY_GPL','Este ambiente utiliza o sistema <a href=\"https://github.com/prefeituramunicipalosorio/secsaude/tree/master/aplicativos_web/eadlivre\" target=\"_blank\">EADLivre</a> sob licen&ccedil;a <a href=\"http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=licenca\" target=\"_blank\">GPLv2</a>.');
+>>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd

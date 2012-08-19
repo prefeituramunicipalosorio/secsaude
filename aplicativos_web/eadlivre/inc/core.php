@@ -46,7 +46,6 @@
  */
 class core {
     /**
-<<<<<<< HEAD
      * Verifica no banco qual o idioma escolhido para o ambiente
      *
      * @name lang
@@ -73,8 +72,6 @@ class core {
     }
 
     /**
-=======
->>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
      * Realiza a conexão com o banco de dados MySQL
      *
      * @name conecta
@@ -85,11 +82,10 @@ class core {
      * @example $core->conteudo($_GET["p"],$_GET["s"],$_GET["ss"]);
      */
     public function conteudo($pagina,$secao,$subsecao){
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
+        $aut = new autentica();
+        if($aut->verificaAut() == 0){
+            $aut->formLogin();
+        }
     }
 }
 
@@ -188,6 +184,31 @@ class autentica {
         }else{ # se não existir
             error(LANG_CORE_AUT_ERRO_2);
         }
+    }
+
+
+    /**
+     * Formulário de autenticação
+     *
+     * @name formLogin
+     * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+     * @since 16
+     * @version 1
+     * @example $aut->formLogin();
+     */
+    public function formLogin(){
+        e("
+            <div id=\"boxLogin\">
+                <h3>".FORMLOGIN_TITULO."</h3>
+                <p><label>".FORMLOGIN_USUARIO.":</label><br>
+                <input id=\"usuario\"".iUI()." type=\"text\"></p>
+                <p><label>".FORMLOGIN_SENHA.":</label><br>
+                <input id=\"senha\"".iUI()." type=\"password\" value=\"oi :)\" onclick=\"this.value=''\"></p>
+                <p>");
+            aUI(FORMLOGIN_BOTAOENTRAR,"fazerLogin()","circle-check");
+            e("</p>
+                <div id=\"msgFazerLogin\"></div>
+         </div>");
     }
 }
 
@@ -292,6 +313,19 @@ class modulos {
  * @example $forum = new forum();
  */
 class forum {
+
+}
+
+/**
+ * Área estilo Wiki para publicação de conteúdo relevante e útil a todos, independente do curso, porém será possível pesquisar somente conteúdo de um curso específico
+ *
+ * @name wiki
+ * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
+ * @since 16
+ * @version 1
+ * @example $wiki = new wiki();
+ */
+class wiki {
 
 }
 
@@ -405,11 +439,7 @@ class temas {
      * @example $tema->tema();
      */
     public function tema(){
-<<<<<<< HEAD
         return "default";
-=======
-
->>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
     }
 
     /**
@@ -422,14 +452,10 @@ class temas {
      * @example $tema->logo();
      */
     public function logo(){
-<<<<<<< HEAD
         echo "
             <div id=\"logo\">
-                <a href=\"/eadlivre/\">EADLivre</a>
+                <a href=\"/eadlivre/\" class=\"default\">EADLivre</a>
             </div>";
-=======
-
->>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
     }
 
     /**
@@ -454,13 +480,9 @@ class temas {
      * @example $tema->boxlogin();
      */
     public function boxlogin(){
-<<<<<<< HEAD
         echo "
         <div id=\"bemvindo\">
             Seja bem vindo visitante!
         </div>";
-=======
-        
->>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
     }
 }

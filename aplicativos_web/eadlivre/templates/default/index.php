@@ -36,25 +36,39 @@
  */
 include("templates/".TEMA_DIR."/lang/".LANG."/lang.php");
 $core = new core();
-$tema = new tema();
+$tema = new temas();
 ?>
 <html>
     <head>
         <title><?= TAG_TITLE ?></title>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <link rel="stylesheet" type="text/css" href="templates/<?= TEMA_DIR ?>/inc/css.css">
+        <script type="text/javascript" src="templates/<?= TEMA_DIR ?>/inc/js.js"></script>
+        <link rel="stylesheet" type="text/css" href="inc/css.css">
+        <script type="text/javascript" src="inc/js.js"></script>
+        <!-- JQUERYUI -->
+        <script type="text/javascript" src="templates/<?= TEMA_DIR ?>/inc/jqueryui/js/jquery-1.4.4.js"></script>
+        <script type="text/javascript" src="templates/<?= TEMA_DIR ?>/inc/jqueryui/js/jquery-ui-1.8.10.custom.min.js"></script>
+        <script type="text/javascript" src="templates/<?= TEMA_DIR ?>/inc/jqueryui.js"></script>
+        <link type="text/css" href="templates/<?= TEMA_DIR ?>/inc/jqueryui/css/redmond/jquery-ui-1.8.10.custom.css" rel="stylesheet" />
+        <link type="text/css" href="templates/<?= TEMA_DIR ?>/inc/jqueryui.css" rel="stylesheet" />
+        <!-- JQUERYUI -->
     </head>
     <body>
-        <div id="topo">
+        <div id="coluna_esq">
             <? $tema->logo() ?>
-            <? $tema->boxlogin() ?>
-        </div>
-        <div id="conteudo">
+            <div id="bemvindo">
+                <? $tema->boxlogin() ?>
+            </div>
+
             <div id="menu">
                 <? $tema->menu() ?>
             </div>
-            <div id="conteudo">
-                <? $core->conteudo($_GET["p"],$_GET["s"],$_GET["ss"]) ?>
-            </div>
         </div>
+        <div id="conteudo">
+            <? $core->conteudo($_GET["p"],$_GET["s"],$_GET["ss"]) ?>
+        </div>
+        <div style="clear:both"></div>
         <div id="rodape">
             <?= COPY_MSG ?>
             <?= COPY_GPL ?>

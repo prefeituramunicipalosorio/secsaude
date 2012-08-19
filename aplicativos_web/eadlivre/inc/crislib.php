@@ -869,15 +869,25 @@ function janelaUI($nomejanela,$nomedivajax,$width,$height,$conteudo=false){
 
 /**
  * Cria tag <a> com jqueryui
+ * @name iUI
  * @param string $nome
  * @param string $onclick
  * @param string $icon
+ * @example aUI('Cadastrar','fazCadastro()','disk');
  */
 function aUI($nome,$onclick,$icon,$href=false){
 	if($href == false){ $href = "#"; }
         e("<a href=\"$href\" onclick=\"$onclick\" id=\"dialog_link\" class=\"ui-state-default ui-corner-all\" style=\"margin-right: 5px;\"><span class=\"ui-icon ui-icon-$icon\"></span>$nome</a>");
 }
 
+/**
+ * Adiciona classe da jQuery UI para modificar o visual de um campo de formulário
+ * @name iUI
+ * @example <input type='text' id='nome'<?= iUI() ?>>
+ */
+function iUI(){
+    return " class=\"ui-state-default ui-corner-all\"";
+}
 
 ?>
 

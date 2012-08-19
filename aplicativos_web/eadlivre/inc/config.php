@@ -37,16 +37,12 @@
 
 # Definições gerais
 define('SISTEMA_AUTENTICACAO','0'); // 0 = sistema deste pacote | 1 = usando sistema externo
-$core = new core();
-define('LANG',$core->lang()); // idiomas no diretório lang/
+define('LANG','pt-br'); // idioma padrão. Idiomas no diretório lang/
 define('EMAIL_ADMINISTRADOR','dtisaude@hotmail.com');
-<<<<<<< HEAD
-define('TAG_TITLE',$core->tag_title());
-=======
+
 define('TAG_TITLE','EAD Livre - Secretaria Municipal da Sa&uacute;de / Os&oacute;rio - RS');
->>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
-$tema = new temas();
-define('TEMA_DIR',$tema->tema());
+
+define('TEMA_DIR','default'); //tema padrão
 
 # Banco de dados MySQL
 define('DBURL','localhost');

@@ -1,9 +1,6 @@
 <?
 session_start();
-<<<<<<< HEAD
-error_reporting(1);
-=======
->>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
+
 /*
  *  EAD Livre para capacitações à distância com foco na facilidade de uso e pequena curva de aprendizado para usar o ambiente
  *  Copyright (C) 2012 Secretaria Municipal da Saúde
@@ -35,23 +32,19 @@ error_reporting(1);
  * @package eadlivre
  * @author Tiago Cardoso Floriano <mail@poweredbycaffeine.com.br>
  * @since 1
- * @version 2
+ * @version 3
  * @license GPLv2
  * @link http://saude.osorio.rs.gov.br/?ti&s=softwarelivre&ss=eadlivre
  */
 
-<<<<<<< HEAD
 include("inc/crislib.php");
-include("inc/core.php");
 include("inc/config.php");
+include("inc/core.php");
+$con = new conexao();
+$con->conecta();
+
 include("lang/".LANG."/lang.php");
 
-include("templates/default/index.php");
-=======
-include("inc/config.php");
-include("inc/crislib.php");
-include("inc/core.php");
+include("templates/".TEMA_DIR."/index.php");
 
-include("templates/default/header.php");
-include("templates/default/footer.php");
->>>>>>> 0248ab39a6a9cd328877b24f53cad0b5b943bcfd
+$con->fecha();
